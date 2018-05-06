@@ -94,15 +94,15 @@
  
  	/* Validate the length of HID descriptor, the 4 first bytes:
 --- i2c-hid.orig/Makefile	2018-05-02 16:57:20.183991952 +0200
-+++ i2c-hid/Makefile	2018-05-07 00:29:39.851849413 +0200
++++ i2c-hid/Makefile	2018-05-07 00:45:08.577406192 +0200
 @@ -2,4 +2,8 @@
  # Makefile for the I2C input drivers
  #
  
 -obj-$(CONFIG_I2C_HID)				+= i2c-hid.o
-+obj-$(CONFIG_I2C_HID)   = i2c-hid.o
++obj-$(CONFIG_I2C_HID)  += i2c-hid.o
 +
-+i2c-hid-objs		= i2c-hid-core.o
++i2c-hid-objs            = i2c-hid-core.o
 +i2c-hid-$(CONFIG_DMI)  += i2c-hid-dmi-quirks.o
 +
 --- i2c-hid.orig/i2c-hid.h	1970-01-01 01:00:00.000000000 +0100
