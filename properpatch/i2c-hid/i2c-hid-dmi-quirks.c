@@ -110,6 +110,14 @@ static const struct dmi_system_id i2c_hid_dmi_desc_override_table[] = {
 			DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Primebook C13"),
 		},
 		.driver_data = (void *)&sipodev_desc
+	},
+	{
+		.ident = "Trekstor Primebook C11",
+		.matches = {
+			DMI_EXACT_MATCH(DMI_SYS_VENDOR, "TREKSTOR"),
+			DMI_EXACT_MATCH(DMI_PRODUCT_NAME, "Primebook C11"),
+		},
+		.driver_data = (void *)&sipodev_desc
 	}
 };
 
